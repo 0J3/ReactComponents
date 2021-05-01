@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"rootDir": "./ts",
+		"outDir": "./js",
+		"target": "ES5",
+		"moduleResolution": "node",
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"declaration": true,
+		"declarationDir": "./d.ts",
+		"declarationMap": true
+	}
+}
