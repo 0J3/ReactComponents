@@ -67,7 +67,7 @@ export default class UwUIfy extends React.Component {
 	render() {
 		const a = (
 			<div className={`UwUifyEl 0J3Elements-UwUify`}>
-				{uwuifyWithFaces(this.context)}
+				{uwuifyWithFaces(this.props.content)}
 			</div>
 		);
 		return a;

@@ -4,9 +4,9 @@ Some random react components
 
 # Usage
 
-Import using `import { COMPONENT } from 'reactcomponents';` or `import ReactComponents from 'reactcomponents';`
+Import using `import { COMPONENT } from '@norathefurry/reactcomponents';` or `import ReactComponents from '@norathefurry/reactcomponents';`
 
-(in js, use `const ReactComponents = require('reactcomponents');`/`const { COMPONENT } = require('reactcomponents');`, replace `COMPONENT` with the name(s) of the components you want/need)
+(in js, use `const ReactComponents = require('@norathefurry/reactcomponents');`/`const { COMPONENT } = require('@norathefurry/reactcomponents');`, replace `COMPONENT` with the name(s) of the components you want/need)
 
 # Components
 

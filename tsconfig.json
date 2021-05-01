@@ -7,7 +7,6 @@
 		"jsx": "react-jsx",
 		"sourceMap": true,
 		"declaration": true,
-		"declarationDir": "./d.ts",
 		"declarationMap": true
 	}
 }
