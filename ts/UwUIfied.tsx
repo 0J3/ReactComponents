@@ -1,8 +1,8 @@
 // idk why you'd use this but here it is
 
-import React from 'react';
+import * as React from 'react';
 
-export const uwuify = str => {
+export const uwuify = (str: string) => {
 	let r = [[,]];
 	r.push([/[rl]/gi, 'w']);
 	r.push([/youw/gi, 'ur']);
@@ -37,8 +37,15 @@ export const uwuFaces = [
 	'/(^•ω•^)',
 ];
 
-export const uwuifyWithFaces = input => {
-	let uwuText = uwuify(input);
+export const uwuifyWithFaces = (
+	input:
+		| string
+		| boolean
+		| React.ReactChild
+		| React.ReactFragment
+		| React.ReactPortal
+) => {
+	let uwuText = uwuify(input.toString());
 
 	const facecount = Math.max(
 		1,
@@ -67,7 +74,7 @@ export default class UwUIfy extends React.Component {
 	render() {
 		const a = (
 			<div className={`UwUifyEl 0J3Elements-UwUify`}>
-				{uwuifyWithFaces(this.props.content)}
+				{uwuifyWithFaces(this.props.children)}
 			</div>
 		);
 		return a;
