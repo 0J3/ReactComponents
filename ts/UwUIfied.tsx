@@ -95,9 +95,9 @@ export default class UwUIfy extends React.Component<{
 				? true
 				: this.props.useEmojis;
 		const a = (
-			<div className={`UwUifyEl 0J3Elements-UwUify`}>
+			<span className={`UwUifyEl 0J3Elements-UwUify`}>
 				{(dontUseEmojis ? uwuifyWithFaces : uwuify)(this.props.children)}
-			</div>
+			</span>
 		);
 		return a;
 	}
