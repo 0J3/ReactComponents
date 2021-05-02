@@ -13,6 +13,7 @@ const uwuify = (str: string) => {
 	for (const pair in r) {
 		str = str.replace(r[pair][0], r[pair][1]);
 	}
+	str = str.split('this').join('dis');
 	return str;
 };
 
