@@ -30,7 +30,7 @@ const getYearsSince = (epoch: number) => {
 	return days / 365;
 };
 
-export default class TimeSince extends React.Component<
+export default class YearsSince extends React.Component<
 	{
 		/**
 		 * @name time
@@ -110,4 +110,4 @@ export default class TimeSince extends React.Component<
 		return v;
 	}
 }
-if (module) module.exports = TimeSince;
+if (module) module.exports = YearsSince;
