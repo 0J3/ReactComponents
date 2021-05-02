@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-export const uwuify = (str: string) => {
+const uwuify = (str: string) => {
 	let r = [[,]];
 	r.push([/[rl]/gi, 'w']);
 	r.push([/youw/gi, 'ur']);
@@ -16,7 +16,7 @@ export const uwuify = (str: string) => {
 	return str;
 };
 
-export const uwuFaces = [
+const uwuFaces = [
 	':3',
 	'(^Â³^)',
 	'uwu',
@@ -37,7 +37,7 @@ export const uwuFaces = [
 	'/(^•ω•^)',
 ];
 
-export const uwuifyWithFaces = (
+const uwuifyWithFaces = (
 	input:
 		| string
 		| boolean
