@@ -7,6 +7,9 @@
 		"jsx": "react-jsx",
 		"sourceMap": true,
 		"declaration": true,
+		"declarationDir": ".",
 		"declarationMap": true
-	}
+	},
+	"include": ["ts/*"],
+	"exclude": ["./js"]
 }
