@@ -8,7 +8,7 @@
 	},
 	"name": "@norathefurry/reactcomponents",
 	"description": "some random react components i made",
-	"version": "0.1.12",
+	"version": "0.1.13",
 	"main": "js/index.js",
 	"license": "MIT",
 	"author": {
