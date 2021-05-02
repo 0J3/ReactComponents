@@ -81,7 +81,7 @@ export default class UwUIfy extends React.Component<{
 	 * @type {boolean}
 	 * @default true
 	 */
-	useEmojis: boolean;
+	useEmojis?: boolean;
 }> {
 	// Static Methods
 	static uwuify = uwuify;
