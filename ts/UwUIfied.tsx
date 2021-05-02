@@ -2,7 +2,15 @@
 
 import * as React from 'react';
 
-const uwuify = (str: string) => {
+const uwuify = (
+	sttr:
+		| string
+		| boolean
+		| React.ReactChild
+		| React.ReactFragment
+		| React.ReactPortal
+) => {
+	let str: string = sttr.toString();
 	let r = [[,]];
 	r.push([/[rl]/gi, 'w']);
 	r.push([/youw/gi, 'ur']);
@@ -66,7 +74,15 @@ const uwuifyWithFaces = (
 	return uwuText;
 };
 
-export default class UwUIfy extends React.Component {
+export default class UwUIfy extends React.Component<{
+	/**
+	 * @name useEmojis
+	 * @description Use Emojis
+	 * @type {boolean}
+	 * @default true
+	 */
+	useEmojis: boolean;
+}> {
 	// Static Methods
 	static uwuify = uwuify;
 	static uwuifyWithFaces = uwuifyWithFaces;
@@ -74,9 +90,13 @@ export default class UwUIfy extends React.Component {
 
 	// Render Func
 	render() {
+		const dontUseEmojis =
+			typeof undefined == typeof this.props.useEmojis
+				? true
+				: this.props.useEmojis;
 		const a = (
 			<div className={`UwUifyEl 0J3Elements-UwUify`}>
-				{uwuifyWithFaces(this.props.children)}
+				{(dontUseEmojis ? uwuifyWithFaces : uwuify)(this.props.children)}
 			</div>
 		);
 		return a;
