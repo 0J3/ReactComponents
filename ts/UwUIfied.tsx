@@ -10,7 +10,7 @@ const uwuify = (str: string) => {
 	r.push([/awe(?![a-z])/gi, 'r']);
 	r.push([/ove/gi, 'uv']);
 	r.push([/(n)([aeiou])/gi, '$1y$2']);
-	for (var pair in r) {
+	for (const pair in r) {
 		str = str.replace(r[pair][0], r[pair][1]);
 	}
 	return str;
@@ -23,8 +23,6 @@ const uwuFaces = [
 	'UwU',
 	'owo',
 	'OwO',
-	':////',
-	';-;;;',
 	'>.<',
 	'(ꈍᴗꈍ)',
 	'^•ﻌ•^',
@@ -35,6 +33,8 @@ const uwuFaces = [
 	'rawr x3',
 	'nyaa~~',
 	'/(^•ω•^)',
+	'x3',
+	'rawr~',
 ];
 
 const uwuifyWithFaces = (
@@ -45,6 +45,7 @@ const uwuifyWithFaces = (
 		| React.ReactFragment
 		| React.ReactPortal
 ) => {
+	let uwuFaces = UwUIfy.uwuFaces;
 	let uwuText = uwuify(input.toString());
 
 	const facecount = Math.max(
