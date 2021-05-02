@@ -17,7 +17,6 @@ const uwuify = (str: string) => {
 };
 
 const uwuFaces = [
-	':3',
 	'(^Â³^)',
 	'uwu',
 	'UwU',
@@ -28,7 +27,8 @@ const uwuFaces = [
 	'^•ﻌ•^',
 	'(ˆ ﻌ ˆ)♡',
 	':3',
-	':3', // important enough to have twice
+	':3',
+	':3', // important enough to have 3 times
 	'ʘwʘ',
 	'rawr x3',
 	'nyaa~~',
