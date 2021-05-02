@@ -52,7 +52,7 @@ const uwuifyWithFaces = (
 		1,
 		Math.round(uwuText.length / 10) * Math.random()
 	);
-	for (var i = facecount; i > 0; i--) {
+	for (let i = facecount; i > 0; i--) {
 		const pivot = Math.floor(Math.random() * uwuText.length);
 		uwuText =
 			uwuText.substring(0, pivot) +
